@@ -2,6 +2,8 @@ const reducer = function (oldState, action) {
   switch(action.type) {
     case "ADD_ORANGE":
     return {fruit: [...oldState.fruit, action.fruit]};
+    case "ADD_FRUIT":
+    return {fruit: [...oldState.fruit, action.fruit]};
     default:
       return oldState;
   }

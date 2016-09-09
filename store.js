@@ -6,13 +6,6 @@ const store = createStore(reducer, {fruit: []});
 window.store = store;
 window.actions = Actions;
 
-const display = () => {
-  const stand = document.getElementById('stand');
-  stand.innerHTML = window.store.getState().fruit;
-};
-
-window.store.subscribe(display);
-
 
 //getState()
 //dispatch(action)

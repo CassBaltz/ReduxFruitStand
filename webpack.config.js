@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   context: __dirname,
-  entry: "./store.js",
+  entry: "./app.jsx",
   output: {
     path: path.join(__dirname),
     filename: "bundle.js"
@@ -14,13 +14,13 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loader: 'babel',
         query: {
-          presets: ['es2015']
+          presets: ['es2015', 'react']
         }
       }
     ]
   },
   devtool: 'source-maps',
   resolve: {
-    extensions: ["", ".js"]
+    extensions: ["", ".js", ".jsx"]
   }
 };
